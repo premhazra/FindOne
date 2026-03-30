@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import Logo from '@components/common/Logo';
-import { FOOTER_LINKS, SOCIAL_LINKS } from '@data/navigation';
+import Logo from '@shared/components/common/Logo';
+import { FOOTER_LINKS, SOCIAL_LINKS } from '@shared/constants/navigation';
 
 export default function Footer() {
   return (

@@ -3,17 +3,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
+      "@app/*": ["./src/app/*"],
       "@features/*": ["./src/features/*"],
+      "@shared/*": ["./src/shared/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@services/*": ["./src/services/*"],
-      "@utils/*": ["./src/utils/*"],
       "@assets/*": ["./src/assets/*"],
-      "@config/*": ["./src/config/*"],
-      "@store/*": ["./src/store/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@data/*": ["./src/data/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@config/*": ["./src/config/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import Logo from '@components/common/Logo';
-import Button from '@components/common/Button';
-import { NAV_LINKS } from '@data/navigation';
+import Logo from '@shared/components/common/Logo';
+import Button from '@shared/components/common/Button';
+import { NAV_LINKS } from '@shared/constants/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

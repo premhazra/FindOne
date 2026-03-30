@@ -7,17 +7,17 @@ import AuthLayout from '@layouts/AuthLayout';
 import DashboardLayout from '@layouts/DashboardLayout';
 
 // Eager-loaded (critical path)
-import HomePage from '@features/landing/pages/HomePage';
+import HomePage from '@features/home/pages/HomePage';
 
 // Lazy-loaded (code-split)
 const LoginPage = lazy(() => import('@features/auth/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@features/auth/pages/RegisterPage'));
-const WorkerDashboardPage = lazy(() => import('@features/dashboard/worker/pages/WorkerDashboardPage'));
-const ClientDashboardPage = lazy(() => import('@features/dashboard/client/pages/ClientDashboardPage'));
-const AdminDashboardPage = lazy(() => import('@features/dashboard/admin/pages/AdminDashboardPage'));
+const WorkerDashboardPage = lazy(() => import('@features/dashboard/pages/WorkerDashboardPage'));
+const ClientDashboardPage = lazy(() => import('@features/dashboard/pages/ClientDashboardPage'));
+const AdminDashboardPage = lazy(() => import('@features/dashboard/pages/AdminDashboardPage'));
 const JobsPage = lazy(() => import('@features/jobs/pages/JobsPage'));
-const ProfilePage = lazy(() => import('@features/profiles/pages/ProfilePage'));
-const MessagesPage = lazy(() => import('@features/messaging/pages/MessagesPage'));
+const ProfilePage = lazy(() => import('@features/profile/pages/ProfilePage'));
+const MessagesPage = lazy(() => import('@features/dashboard/pages/MessagesPage'));
 const NotFoundPage = lazy(() => import('@features/misc/pages/NotFoundPage'));
 
 // Loading fallback

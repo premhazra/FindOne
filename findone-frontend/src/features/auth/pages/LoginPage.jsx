@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Input } from '@components/ui';
-import Button from '@components/common/Button';
+import Input from '@shared/components/ui/Input';
+import Button from '@shared/components/common/Button';
 
 export default function LoginPage() {
   return (

@@ -10,7 +10,7 @@ import {
   X,
 } from 'lucide-react';
 import { useState } from 'react';
-import Logo from '@components/common/Logo';
+import Logo from '@shared/components/common/Logo';
 
 const sidebarLinks = [
   { to: '/dashboard/worker', label: 'Overview', icon: LayoutDashboard },

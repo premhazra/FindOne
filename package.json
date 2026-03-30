@@ -1,0 +1,10 @@
+{
+  "name": "findone-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix findone-frontend run dev -- --host",
+    "build": "npm --prefix findone-frontend run build",
+    "preview": "npm --prefix findone-frontend run preview",
+    "install:frontend": "npm --prefix findone-frontend install"
+  }
+}

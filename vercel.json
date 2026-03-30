@@ -1,4 +1,0 @@
-﻿{
-  "buildCommand": "cd findone-frontend && npm install && npm run build",
-  "outputDirectory": "findone-frontend/dist"
-}

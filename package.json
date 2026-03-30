@@ -2,6 +2,7 @@
   "name": "findone-workspace",
   "private": true,
   "scripts": {
+    "postinstall": "npm --prefix findone-frontend install",
     "dev": "npm --prefix findone-frontend run dev -- --host",
     "build": "npm --prefix findone-frontend run build",
     "preview": "npm --prefix findone-frontend run preview",

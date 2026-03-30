@@ -1,0 +1,4 @@
+﻿{
+  "buildCommand": "npm install --prefix findone-frontend && npm run build",
+  "installCommand": "npm install && npm install --prefix findone-frontend"
+}

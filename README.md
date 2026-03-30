@@ -1,48 +1,131 @@
 ﻿# FindOne
 
-FindOne is a modern service marketplace platform focused on helping users discover and hire skilled professionals quickly.
+Find Skilled Professionals Instantly.
 
-## Repository Overview
+A production-style React frontend for connecting clients with verified workers, featuring AI-focused discovery UX, dashboard flows, and scalable feature-based architecture.
 
-This repository currently contains the frontend application:
+## Highlights
 
-- [findone-frontend](findone-frontend)
+- Feature-first code organization for long-term scalability
+- Reusable shared UI, hooks, utilities, and API client layer
+- Smooth, modern UI using Tailwind CSS and Framer Motion
+- Role-oriented flows for clients, workers, and admin
+- Clean routing setup with lazy-loaded pages
 
-## Documentation Strategy
+## Tech Stack
 
-To keep documentation clean and industry-standard:
-
-- Root README ([README.md](README.md)): high-level project overview, repository structure, and quick navigation.
-- App README ([findone-frontend/README.md](findone-frontend/README.md)): implementation details, architecture, scripts, and local setup.
-
-This is a common and recommended pattern for repositories with subprojects.
+- React 18
+- Vite 6
+- Tailwind CSS 3
+- React Router 6
+- Zustand
+- Axios
+- Framer Motion
+- Lucide React
 
 ## Quick Start
 
-Run frontend from repo root:
+Requirements:
+
+- Node.js 18+
+- npm 9+
+
+Install and run from repository root:
 
 ```bash
 npm --prefix findone-frontend install
 npm --prefix findone-frontend run dev -- --host
 ```
 
-Build frontend from repo root:
+App will run on:
+
+- Local: http://localhost:3000 (or next available port)
+- Network: shown in terminal at startup
+
+## Scripts
+
+- npm --prefix findone-frontend run dev: Start development server
+- npm --prefix findone-frontend run build: Create production build
+- npm --prefix findone-frontend run preview: Preview production build locally
+- npm --prefix findone-frontend run lint: Run ESLint checks
+
+## Environment
+
+Create a local environment file from .env.example and configure values as needed.
+
+Common variables:
+
+- VITE_API_BASE_URL
+- VITE_APP_NAME
+
+## Architecture
+
+Core app lives inside findone-frontend/src and follows a clean feature-based structure:
+
+```text
+src/
+|- app/                  # App bootstrap, router, entry points
+|- features/             # Domain modules (auth, home, jobs, dashboard, profile)
+|- shared/               # Reusable cross-feature code
+|  |- components/        # Generic UI and common components
+|  |- hooks/             # Reusable hooks
+|  |- utils/             # Utilities/helpers
+|  |- constants/         # Shared constants and navigation config
+|  |- api/               # Shared Axios client
+|  |- lib/               # Shared framework glue (route guards, etc.)
+|  |- store/             # Shared global state slices
+|- layouts/              # Layout shells (Main, Auth, Dashboard)
+|- assets/               # Fonts, icons, images
+|- styles/               # Global styles
+|- config/               # Site-level configuration
+```
+
+## Feature Modules
+
+- features/auth: Login/Register pages, auth service, auth store
+- features/home: Landing page sections and content data
+- features/jobs: Jobs page and job/booking services
+- features/dashboard: Admin/Client/Worker dashboard pages and messages
+- features/profile: Profile page and worker service
+- features/misc: Fallback pages (for example, Not Found)
+
+## Design Principles
+
+- Keep domain logic inside its feature module
+- Keep reusable code in shared only when truly cross-feature
+- Prefer explicit imports over barrel files for clarity
+- Keep app and router layer thin and declarative
+
+## Build and Deployment
+
+Production build:
 
 ```bash
 npm --prefix findone-frontend run build
 ```
 
-## Current Structure
+Preview build:
 
-```text
-findone/
-|- README.md
-|- findone-frontend/
-   |- README.md
-   |- package.json
-   |- src/
+```bash
+npm --prefix findone-frontend run preview
 ```
 
-## Notes
+The app is deploy-ready for static hosting platforms like Vercel, Netlify, or any CDN-backed static server.
 
-If you prefer a single README only, we can merge [findone-frontend/README.md](findone-frontend/README.md) into [README.md](README.md) and keep a short pointer file in the frontend folder.
+## Contribution Guidelines
+
+- Follow existing naming and folder conventions
+- Add new business logic under the correct feature module
+- Keep shared layer generic and framework-agnostic where possible
+- Run lint and build checks before opening a PR
+
+## Project Identity
+
+- Product: FindOne
+- Tagline: Find Skilled Professionals Instantly
+- Website: https://findone.in
+- Contact: hello@findone.in
+
+## License
+
+MIT
